@@ -1,0 +1,31 @@
+{
+  "name": "adan-rahman-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB --kill-others-on-fail \"npm:server\" \"vite --port 5173 --strictPort false\"",
+    "server": "node --env-file=.env server/index.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "lucide-react": "^1.48.0",
+    "nodemailer": "^10.0.12",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sweetalert2": "^11.26.25"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "concurrently": "^10.0.5",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.1"
+  }
+}
